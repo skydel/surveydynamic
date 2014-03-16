@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visitor's Survey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="./js/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!--
+         <div class="header"></div> <!--Used For logo-->
+
+        <div class="head">
+            <p>2014 Annual Visitor Survey</p>
+            <h1><span class="siteName">dummy.dummy.com</span></h1>
+        </div>
+
+        <div class="dateDay">
+            Today is:
+            <script type="text/javascript">
+                getDate();
+            </script>
+        </div>
+
+
+        <div class="main-form">
+            <form id="form" action="index.php" method="get">
+                <div class="question" id="q1">
+                    <!-- new -->
+                    <strong><span>Dear <span style="text-transform:none;" class="siteName">win.vpscontestrewards.eu</span> visitor,
+                        </span></strong><br>
+                    <br>
+                    You've been selected to take part in the 2014 Annual Survey. Tell
+                    us what you think of <span style="text-transform:none;" class="siteName">win.vpscontestrewards.eu</span> in this 30 second survey, and to
+                    say <b>"thank you"</b> we'll present you with a few <b>exclusive offers worth over &pound;50</b>!<br>
+                    <!-- new -->
+
+                    <!--q1 -->
+                    <br /><br /><strong>Question 1 of 4: What is your gender?</strong><br /><br />
+                    <span id="4aspan">
+                        <input name="4" value="m" id="4a" type="radio" onclick="loadQ2();">
+                        <label for="4a" onmouseover="ColorHoverOn('4aspan');" onmouseout="ColorHoverOff('4aspan');">Male</label>
+                    </span>
+                    <br />
+                    <span id="4bspan">
+                        <input name="4" value="f" id="4b" type="radio" onclick="loadQ2();"> 
+                        <label for="4b" onmouseover="ColorHoverOn('4bspan');" onmouseout="ColorHoverOff('4bspan');">Female</label>
+                    </span><br />
+                    <br />
+                    <!--q1 -->
+                    <input type="button" onclick="loadQ2();" value="Next.." >                                                     
+                </div>
+                <div class="question" id="q2" style="display: none;">
+                    <br />Receive a special offer worth <b>over &pound;50</b> on completion!
+
+                    <!--q2 -->
+                    <br /><br />
+                    <strong>Question 2 of 4: Where are you viewing <span class="siteName">OWL</span> from right now?</strong><br /><br />
+                    <span id="1aspan"><input name="1" value="1a" id="1a" type="radio" onclick="loadQ3();"> <label for="1a" onmouseover="ColorHoverOn('1aspan');" onmouseout="ColorHoverOff('1aspan');">At home</label></span><br />
+                    <span id="1bspan"><input name="1" value="1b" id="1b" type="radio" onclick="loadQ3();"> <label for="1b" onmouseover="ColorHoverOn('1bspan');" onmouseout="ColorHoverOff('1bspan');">At work</label></span><br />
+                    <span id="1cspan"><input name="1" value="1c" id="1c" type="radio" onclick="loadQ3();"> <label for="1c" onmouseover="ColorHoverOn('1cspan');" onmouseout="ColorHoverOff('1cspan');">Other</label></span><br />
+                    <br />
+                    <!--q2 -->
+                    <input type="button" onclick="loadQ3();" value="Next.." >      
+                </div>
+                <div class="question" id="q3" style="display: none;">
+                    <br />Receive a special offer worth <b>over &pound;50</b> on completion!
+
+                    <!--q3 -->
+                    <br /><br /><strong>Question 3 of 4: How often do you visit <span class="siteName">OWL</span></strong>? <br /><br />
+                    <span id="2aspan"><input name="2" value="2a" id="2a" type="radio" onclick="loadQ4();"> <label for="2a" onmouseover="ColorHoverOn('2aspan');" onmouseout="ColorHoverOff('2aspan');">Once a week or more</label></span><br />
+                    <span id="2bspan"><input name="2" value="2b" id="2b" type="radio" onclick="loadQ4();"> <label for="2b" onmouseover="ColorHoverOn('2bspan');" onmouseout="ColorHoverOff('2bspan');">Less than once a week</label></span><br />
+                    <span id="2cspan"><input name="2" value="2c" id="2c" type="radio" onclick="loadQ4();"> <label for="2c" onmouseover="ColorHoverOn('2cspan');" onmouseout="ColorHoverOff('2cspan');">This is my first visit</label></span><br />
+                    <br />
+
+                    <!--q3 -->
+
+                    <input type="button" onclick="loadQ4();" value="Next.." >       
+                </div>
+                <div class="question" id="q4" style="display: none;">
+                    <br />Receive a special offer worth <b>over &pound;50</b> on completion!
+                    <!--Q4 -->
+                    <br /><br /><strong>Question 4 of 4: Do you browse the internet on your mobile phone?</strong><br /><br />
+                    <span id="3aspan"><input name="3" value="3a" id="3a" type="radio" onclick="loadProgress();"> <label for="3a" onmouseover="ColorHoverOn('3aspan');" onmouseout="ColorHoverOff('3aspan');">Yes</label></span><br />
+                    <span id="3bspan"><input name="3" value="3b" id="3b" type="radio" onclick="loadProgress();"> <label for="3b" onmouseover="ColorHoverOn('3bspan');" onmouseout="ColorHoverOff('3bspan');">No</label></span><br />
+                    <br />
+                    <!--Q4 -->
+
+                    <button id="submit">Finish..</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="searching" style="display: none;">
+            <b>Thank you for your input.</b> We have the following offers for your participation.
+            Please choose <b>(1)</b> offer from the below list for participating in our survey. <br><br>
+            <!-- neew -->
+            <div style="width: 540px;">
+                <table style="" rules="rows" class="question" border="0" bordercolor="#80ada6" cellpadding="10" cellspacing="0" width="600">
+                    <tbody>
+                        <tr>
+                            <td width="100"><a href="http://topclicktrack.com/base2.php?id=1" target="_blank"><img src="image/liftserumpro.gif" border="0" height="110" width="150"></a></td>
+                            <td width="300"><b>Lift Serum Pro Skincare Kit</b><br>
+                                <span style="color: red; font-weight: bold;"></span>Regular Price: £169.00 <br>Your Price: <span style="background-color: yellow; font-weight: bold;"><i>£0.00!</i></span><br>Postage: £1.99 <br>Quantity Left: 3<br>
+
+                            </td>
+                            <td width="200"><form>
+                                    <input value="Click Here To Choose This" onclick="window.open('http://topclicktrack.com/base2.php?id=1')" type="button">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100"><a href="http://topclicktrack.com/base2.php?id=3" target="_blank"><img src="image/nuetrim.gif" border="0" height="110" width="150"></a></td>
+                            <td width="300"><b class="question">Celebrity Weight Loss</b><br>
+                                Regular Price: £99.00 <br>Your Price: <span style="background-color: yellow; font-weight: bold;"><i>£0.00!</i></span><br>Postage:£3.99<br>Quantity Left: 6<br>
+                            </td>
+                            <td width="200"><form>
+                                    <input value="Click Here To Choose This" onclick="window.open('http://topclicktrack.com/base2.php?id=3')" type="button">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100"><img src="image/visa_aj.gif" border="0" height="110" width="150"></td>
+                            <td width="300"><b><strike>£50 Visa Giftcard</strike></b><br>
+                    <strike>Regular Price: £50.00 <br>Your Price: <span style="background-color: yellow; font-weight: bold;"><i>£0.00!</i></span><br>Postage: £0.99<br>Quantity Left: 0</strike><br>
+
+                    </td>
+                    <td width="200">Sorry, this offer is no longer available.
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+            <!-- new -->            
+        </div>
+
+
+        <div class="footer">
+            <div>
+                Copyright 2014 All rights reserved. We are not affiliated nor partnered, with <span class="siteName">OWL</span>.
+                <span class="siteName">OWL</span> has not authored, participated in, or in any way reviewed this advertisement or authorized it. The trial products offered on
+                the last page pay this website for orders placed.
+            </div>
+            <div id="terms" style="display:none; margin-top: 10px;">
+                * S&H charges do apply. Some of the products described on this site have terms regarding continued billing after the free trial period ends. This is referred to as negative option,
+                or continuity billing. Therefore, it is important to ensure that you are fully aware of the terms associated with each product before you order. See manufacturer's website for full
+                terms and conditions before ordering your free trial as these vary by product. Please keep in mind that these are separate companies and we are not the best source for information about
+                orders or specific policies. Because these companies control their own policies, shipping and other fees may change periodically.
+            </div>
+
+        </div>
+
+        <!-- prevent default form submit and submit via ajax -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                getHostName(); //setting the site name
+
+                var form = $('#form'); // contact form
+                //var submit = $('#submit');  // submit button
+                //var alert = $('.alert'); // alert div for show alert message
+
+                // form submit event
+                form.on('submit', function(e) {
+                    e.preventDefault(); // prevent default form submit
+                    loadOffers();
+
+                    $.ajax({
+                        url: form.attr('action'), // form action url
+                        type: form.attr('method'), // form submit method get/post
+                        dataType: 'html', // request type html/json/xml
+                        data: form.serialize(), // serialize form data 
+                        beforeSend: function() {
+
+                        },
+                        success: function(data) {
+                            form.trigger('reset'); // reset form
+                        },
+                        error: function(e) {
+                            console.log(e);
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

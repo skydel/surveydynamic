@@ -1,0 +1,61 @@
+root { 
+    display: block;
+}
+
+html,body {
+    width: 733px;
+    margin: 0 auto;
+    padding:0;
+    font-family:Arial,Verdana,Helvetica,Sans-Serif;
+    font-size:12px;
+    background-color: rgb(255, 255, 255);
+}
+label {
+    cursor:pointer;
+}
+
+.head{
+    background: #006699;
+    padding: 10px;
+}
+.head p{
+    font-size: 1.9em;
+    color: #cccccc;
+    margin: 0px;
+    padding: 0px;
+}
+.head h1{
+    font-size: 3.1em;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+/*
+.header{
+
+    height:193px; 
+    background-image:url(../image/SurveyHeader1.png);
+}
+*/
+.dateDay{
+    margin-left: 515px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.main-form{
+    margin: 30px 0 0 0;
+}
+
+.question{
+    font-size: 14px;
+    font-family: Arial;
+    line-height: normal;
+}
+
+.footer{
+    border-top: 1px solid #CC0000;
+    padding-top: 20px;
+    margin: 30px 0 0 0;
+    text-align: justify;
+}
